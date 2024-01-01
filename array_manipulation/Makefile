@@ -1,7 +1,8 @@
 CC=gcc
-CFLAGS=-I./include
+CFLAGS=-I./include -I./tests
 SRC=$(wildcard src/*.c)     
 SRC_WITHOUT_MAIN=$(filter-out src/main.c, $(SRC))
+TEST_SUITES=$(wildcard tests/test_suites/*.c)
 
 all: 
 	main
@@ -11,7 +12,7 @@ main:
 	main
 	
 test:
-	$(CC) $(CFLAGS) tests/*.c tests/unity/unity.c $(SRC_WITHOUT_MAIN) -o test_main
+	$(CC) $(CFLAGS) $(TEST_SUITES) tests/test_main.c tests/unity/unity.c $(SRC_WITHOUT_MAIN) -o test_main
 	test_main
 	
 
