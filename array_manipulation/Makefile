@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-I./include -I./tests
 SRC=$(wildcard src/*.c)     
 SRC_WITHOUT_MAIN=$(filter-out src/main.c, $(SRC))
-TEST_SUITES=$(wildcard tests/test_suites/*.c)
+TEST_SUITES=$(wildcard tests/test_suites/*/*.c)
 
 all: 
 	main

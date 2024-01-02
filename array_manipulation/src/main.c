@@ -1,4 +1,31 @@
 #include "../include/array.h"
+#include "../include/buffer_utils.h"
+
+void add_value(int* array, int size) {
+    int pos = 0;
+    printf("Insert the position of the value: ");
+    while (scanf("%d", &pos) != 1) {
+        printf("Invalid position %d\n", pos);
+        clean_buffer(actual_getchar);
+    }
+    int value = 0;
+    printf("Insert integer value: ");
+    while (scanf("%d", &value) != 1) {
+        printf("Invalid integer value %d\n", value);
+        clean_buffer(actual_getchar);
+    }
+    insert_at(array, size, pos, value);
+}
+
+void remove_value(int* array, int size) {
+    int pos = 0;
+    printf("Remove at position: ");
+    while (scanf("%d", &pos) != 1) {
+        printf("Invalid position %d\n", pos);
+        clean_buffer(actual_getchar);
+    }
+    remove_at(array, size, pos);
+}
 
 int main(void) {
     int running = 1;
@@ -26,11 +53,11 @@ int main(void) {
                     continue;
 
                 case 2:
-                    insert_at(array, size);
+                    add_value(array, size);
                     continue;
 
                 case 3:
-                    remove_at(array, size);
+                    remove_value(array, size);
                     continue;
 
                 default:

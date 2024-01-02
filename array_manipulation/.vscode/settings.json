@@ -3,6 +3,8 @@
         "main.h": "c",
         "array.h": "c",
         "unity.h": "c",
-        "test_array.h": "c"
+        "test_array.h": "c",
+        "stdio.h": "c",
+        "buffer_utils.h": "c"
     }
 }

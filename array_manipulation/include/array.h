@@ -6,11 +6,9 @@
 
 void quit(int* ptrRunning);
 
-void clean_buffer();
+void insert_at(int* array, int size, int pos, int value);
 
-void insert_at(int* array, int size);
-
-void remove_at(int* array, int size);
+void remove_at(int* array, int size, int pos);
 
 void display_array(int* array, int size);
 
