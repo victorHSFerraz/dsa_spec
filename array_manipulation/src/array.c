@@ -1,5 +1,7 @@
 #include "../include/array.h"
 
+#include <time.h>
+
 void quit(int* ptrRunning) {
     *ptrRunning = 0;
 }
@@ -23,5 +25,12 @@ void remove_at(int* array, int size, int pos) {
 void display_array(int* array, int size) {
     for (int i = 0; i < size; i++) {
         printf("%d ", *(array + i));
+    }
+}
+
+void set_random_values(int* array, int size, int maxRandomValue) {
+    srand((unsigned)time(NULL));
+    for (int i = 0; i < size; i++) {
+        *(array + i) = rand() % (maxRandomValue + 1);
     }
 }

@@ -12,4 +12,18 @@ void remove_at(int* array, int size, int pos);
 
 void display_array(int* array, int size);
 
+void set_random_values(int* array, int size, int maxRandomValue);
+
+// void linear_search(int* array, int size);
+
+// void binary_search(int* array, int size);
+
+// void bubble_sort(int* array, int size);
+
+// void selection_sort(int* array, int size);
+
+// void insertion_sort(int* array, int size);
+
+// void reverse_array(int* array, int size);
+
 #endif

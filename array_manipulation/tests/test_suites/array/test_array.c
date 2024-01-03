@@ -20,3 +20,15 @@ void test_remove_at(void) {
     remove_at(test_array, size, 3);
     TEST_ASSERT_EQUAL_INT(0, test_array[2]);
 }
+
+void test_set_random_values(void) {
+    int test_array[] = {1, 2, 3, 4, 5};
+    int size = sizeof(test_array) / sizeof(test_array[0]);
+    int minRandomValue = 0;
+    int maxRandomValue = 100;
+    set_random_values(test_array, size, maxRandomValue);
+    for (int i = 0; i < size; i++) {
+        TEST_ASSERT_GREATER_OR_EQUAL_INT(minRandomValue, test_array[i]);
+        TEST_ASSERT_LESS_OR_EQUAL_INT(maxRandomValue, test_array[i]);
+    }
+}

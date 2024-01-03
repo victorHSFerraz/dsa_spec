@@ -7,5 +7,6 @@
 void test_quit(void);
 void test_insert_at(void);
 void test_remove_at(void);
+void test_set_random_values(void);
 
 #endif

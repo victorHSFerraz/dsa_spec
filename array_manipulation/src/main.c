@@ -41,7 +41,11 @@ int main(void) {
 
         while (running) {
             int selectedOption = 0;
-            printf("\n\n1 - Display array\n2 - Add value\n3 - Remove value\n0 - Exit\n\n");
+            printf("\n\n1 - Display array\n");
+            printf("2 - Add value\n");
+            printf("3 - Remove value\n");
+            printf("4 - Set random values\n");
+            printf("0 - Exit\n\n");
             scanf("%d", &selectedOption);
             switch (selectedOption) {
                 case 0:
@@ -58,6 +62,10 @@ int main(void) {
 
                 case 3:
                     remove_value(array, size);
+                    continue;
+
+                case 4:
+                    set_random_values(array, size, 100);
                     continue;
 
                 default:
