@@ -14,7 +14,7 @@ void display_array(int* array, int size);
 
 void set_random_values(int* array, int size, int maxRandomValue);
 
-// void linear_search(int* array, int size);
+int linear_search(int* array, int size, int value);
 
 // void binary_search(int* array, int size);
 

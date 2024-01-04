@@ -27,6 +27,22 @@ void remove_value(int* array, int size) {
     remove_at(array, size, pos);
 }
 
+void setup_linear_search(int* array, int size) {
+    printf("Search for value: ");
+    int value = 0;
+    while (scanf("%d", &value) != 1) {
+        printf("Invalid value\n");
+        clean_buffer(actual_getchar);
+    }
+
+    int result = linear_search(array, size, value);
+    if (result == -1) {
+        printf("Value %d not found\n", value);
+    } else {
+        printf("Value %d found at index %d\n", value, result);
+    }
+}
+
 int main(void) {
     int running = 1;
     int* ptrRunning = &running;
@@ -45,8 +61,10 @@ int main(void) {
             printf("2 - Add value\n");
             printf("3 - Remove value\n");
             printf("4 - Set random values\n");
+            printf("5 - Linear Search\n");
             printf("0 - Exit\n\n");
             scanf("%d", &selectedOption);
+            printf("\n");
             switch (selectedOption) {
                 case 0:
                     quit(ptrRunning);
@@ -65,7 +83,11 @@ int main(void) {
                     continue;
 
                 case 4:
-                    set_random_values(array, size, 100);
+                    set_random_values(array, size, 10000);
+                    continue;
+
+                case 5:
+                    setup_linear_search(array, size);
                     continue;
 
                 default:

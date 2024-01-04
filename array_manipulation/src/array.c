@@ -34,3 +34,12 @@ void set_random_values(int* array, int size, int maxRandomValue) {
         *(array + i) = rand() % (maxRandomValue + 1);
     }
 }
+
+int linear_search(int* array, int size, int value) {
+    for (int i = 0; i < size; i++) {
+        if (*(array + i) == value) {
+            return i;
+        }
+    }
+    return -1;
+}

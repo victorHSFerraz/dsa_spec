@@ -16,5 +16,6 @@ int main(void) {
     RUN_TEST(test_insert_at);
     RUN_TEST(test_remove_at);
     RUN_TEST(test_set_random_values);
+    RUN_TEST(test_linear_search);
     return UNITY_END();
 }

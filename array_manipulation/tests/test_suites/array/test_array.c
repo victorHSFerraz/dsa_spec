@@ -32,3 +32,12 @@ void test_set_random_values(void) {
         TEST_ASSERT_LESS_OR_EQUAL_INT(maxRandomValue, test_array[i]);
     }
 }
+
+void test_linear_search(void) {
+    int test_array[] = {1, 2, 3, 4, 5};
+    int size = sizeof(test_array) / sizeof(test_array[0]);
+    int resultSuccess = linear_search(test_array, size, 3);
+    int resultFailure = linear_search(test_array, size, 10);
+    TEST_ASSERT_EQUAL_INT(2, resultSuccess);
+    TEST_ASSERT_EQUAL_INT(-1, resultFailure);
+}
