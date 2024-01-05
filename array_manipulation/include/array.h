@@ -16,7 +16,9 @@ void set_random_values(int* array, int size, int maxRandomValue);
 
 int linear_search(int* array, int size, int value);
 
-// void binary_search(int* array, int size);
+int binary_search(int* array, int size, int value);
+
+void quick_sort(int* array, int size);
 
 // void bubble_sort(int* array, int size);
 

@@ -62,6 +62,7 @@ int main(void) {
             printf("3 - Remove value\n");
             printf("4 - Set random values\n");
             printf("5 - Linear Search\n");
+            printf("6 - Quick Sort\n");
             printf("0 - Exit\n\n");
             scanf("%d", &selectedOption);
             printf("\n");
@@ -83,11 +84,15 @@ int main(void) {
                     continue;
 
                 case 4:
-                    set_random_values(array, size, 10000);
+                    set_random_values(array, size, 500000000);
                     continue;
 
                 case 5:
                     setup_linear_search(array, size);
+                    continue;
+
+                case 6:
+                    quick_sort(array, size);
                     continue;
 
                 default:

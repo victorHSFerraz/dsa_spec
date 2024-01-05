@@ -43,3 +43,10 @@ int linear_search(int* array, int size, int value) {
     }
     return -1;
 }
+
+int binary_search(int* array, int size, int value) {
+    return 0;
+}
+
+void quick_sort(int* array, int size) {
+}
