@@ -46,7 +46,7 @@ int linear_search(int* array, int size, int value) {
 }
 
 int binary_search(int* array, int size, int value) {
-    return 0;
+        return 0;
 }
 
 // 1, 2, 10, 3, 11, 8

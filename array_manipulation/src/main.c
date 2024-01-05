@@ -46,62 +46,60 @@ void setup_linear_search(int* array, int size) {
 int main(void) {
     int running = 1;
     int* ptrRunning = &running;
+    printf("Input array size: ");
+    int size;
+    scanf("%d", &size);
+    int* array = calloc(size, sizeof(int));
+    if (array == NULL) {
+        return -1;
+    }
+
     while (running) {
-        printf("Input array size: ");
-        int size;
-        scanf("%d", &size);
-        int* array = calloc(size, sizeof(int));
-        if (array == NULL) {
-            break;
+        int selectedOption = 0;
+        printf("\n\n1 - Display array\n");
+        printf("2 - Add value\n");
+        printf("3 - Remove value\n");
+        printf("4 - Set random values\n");
+        printf("5 - Linear Search\n");
+        printf("6 - Quick Sort\n");
+        printf("0 - Exit\n\n");
+        scanf("%d", &selectedOption);
+        printf("\n");
+        switch (selectedOption) {
+            case 0:
+                quit(ptrRunning);
+                break;
+
+            case 1:
+                display_array(array, size);
+                continue;
+
+            case 2:
+                add_value(array, size);
+                continue;
+
+            case 3:
+                remove_value(array, size);
+                continue;
+
+            case 4:
+                set_random_values(array, size, 100);
+                continue;
+
+            case 5:
+                setup_linear_search(array, size);
+                continue;
+
+            case 6:
+                quick_sort(array, 0, size - 1);
+                continue;
+
+            default:
+                break;
         }
-
-        while (running) {
-            int selectedOption = 0;
-            printf("\n\n1 - Display array\n");
-            printf("2 - Add value\n");
-            printf("3 - Remove value\n");
-            printf("4 - Set random values\n");
-            printf("5 - Linear Search\n");
-            printf("6 - Quick Sort\n");
-            printf("0 - Exit\n\n");
-            scanf("%d", &selectedOption);
-            printf("\n");
-            switch (selectedOption) {
-                case 0:
-                    quit(ptrRunning);
-                    break;
-
-                case 1:
-                    display_array(array, size);
-                    continue;
-
-                case 2:
-                    add_value(array, size);
-                    continue;
-
-                case 3:
-                    remove_value(array, size);
-                    continue;
-
-                case 4:
-                    set_random_values(array, size, 100);
-                    continue;
-
-                case 5:
-                    setup_linear_search(array, size);
-                    continue;
-
-                case 6:
-                    quick_sort(array, 0, size - 1);
-                    continue;
-
-                default:
-                    break;
-            }
-        }
-        if (array != NULL) {
-            free(array);
-        }
+    }
+    if (array != NULL) {
+        free(array);
     }
     return 0;
 }
