@@ -17,20 +17,5 @@
                 "isDefault": true
             }
         },
-        {
-            "label": "Run Tests",
-            "type": "shell",
-            "command": "gcc",
-            "args": [
-                "-I./include",
-                "-I./tests",
-                "-g",
-                "${workspaceFolder}/tests/test_suites/*.c",
-                "${workspaceFolder}/tests/test_main.c",
-                "${workspaceFolder}/tests/unity/unity.c",
-                "-o",
-                "${workspaceFolder}/bin/testRunner.exe"
-            ]
-        }
     ]
 }

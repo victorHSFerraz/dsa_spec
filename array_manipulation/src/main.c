@@ -84,7 +84,7 @@ int main(void) {
                     continue;
 
                 case 4:
-                    set_random_values(array, size, 500000000);
+                    set_random_values(array, size, 100);
                     continue;
 
                 case 5:
@@ -92,7 +92,7 @@ int main(void) {
                     continue;
 
                 case 6:
-                    quick_sort(array, size);
+                    quick_sort(array, 0, size - 1);
                     continue;
 
                 default:

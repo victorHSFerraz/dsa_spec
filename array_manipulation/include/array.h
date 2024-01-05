@@ -18,7 +18,7 @@ int linear_search(int* array, int size, int value);
 
 int binary_search(int* array, int size, int value);
 
-void quick_sort(int* array, int size);
+void quick_sort(int* array, int start, int end);
 
 // void bubble_sort(int* array, int size);
 
