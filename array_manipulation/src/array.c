@@ -36,17 +36,39 @@ void set_random_values(int* array, int size, int maxRandomValue) {
     }
 }
 
-int linear_search(int* array, int size, int value) {
+int linear_search(int* array, int size, int target) {
     for (int i = 0; i < size; i++) {
-        if (*(array + i) == value) {
+        if (*(array + i) == target) {
             return i;
         }
     }
     return -1;
 }
 
-int binary_search(int* array, int size, int value) {
-        return 0;
+// 1, 2, 10, 3, 11, 8
+int binary_search(int* array, int size, int target) {
+    // target = 11
+    // define low and high variables to keep track of the range of the array
+    int low = 0;
+    int high = size - 1;  // 5
+
+    while (low <= high) {
+        int middle = low + (high - low) / 2;  // 2 ---- 4
+        int value = *(array + middle);        // 10 ---- 11
+
+        if (value > target) {
+            // discard the right side of the array setting a lower high value
+            high = middle - 1;
+        } else if (value < target) {
+            // discard the left side of the array setting a higher low value
+            low = middle + 1;  // 3
+        } else {
+            // the value is equal to the target
+            return middle;  // ---- 4
+        }
+    }
+
+    return -1;
 }
 
 // 1, 2, 10, 3, 11, 8

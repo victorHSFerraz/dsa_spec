@@ -18,5 +18,6 @@ int main(void) {
     RUN_TEST(test_set_random_values);
     RUN_TEST(test_linear_search);
     RUN_TEST(test_quick_sort);
+    RUN_TEST(test_binary_search);
     return UNITY_END();
 }

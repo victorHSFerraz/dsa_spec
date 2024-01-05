@@ -55,3 +55,12 @@ void test_quick_sort(void) {
         TEST_ASSERT_EQUAL_INT(valid_array2[i], test_array2[i]);
     }
 }
+
+void test_binary_search(void) {
+    int test_array[] = {1, 2, 3, 4, 5};
+    int size = sizeof(test_array) / sizeof(test_array[0]);
+    int resultSuccess = binary_search(test_array, size, 3);
+    int resultFailure = binary_search(test_array, size, 10);
+    TEST_ASSERT_EQUAL_INT(2, resultSuccess);
+    TEST_ASSERT_EQUAL_INT(-1, resultFailure);
+}
