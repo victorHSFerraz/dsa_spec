@@ -20,7 +20,7 @@ int binary_search(int* array, int size, int value);
 
 void quick_sort(int* array, int start, int end);
 
-// void bubble_sort(int* array, int size);
+void bubble_sort(int* array, int size);
 
 // void selection_sort(int* array, int size);
 
