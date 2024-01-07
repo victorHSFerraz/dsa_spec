@@ -12,5 +12,6 @@ void test_linear_search(void);
 void test_quick_sort(void);
 void test_binary_search(void);
 void test_bubble_sort(void);
+void test_selection_sort(void);
 
 #endif

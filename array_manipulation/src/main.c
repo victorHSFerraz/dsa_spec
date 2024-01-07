@@ -85,6 +85,7 @@ int main(void) {
             printf("6 - Quick Sort\n");
             printf("7 - Binary Search\n");
             printf("8 - Bubble Sort\n");
+            printf("9 - Selection Sort\n");
             // printf("9 - Modify array size\n");
             printf("0 - Exit\n\n");
             scanf("%d", &selectedOption);
@@ -124,6 +125,10 @@ int main(void) {
 
                 case 8:
                     bubble_sort(array, size);
+                    continue;
+
+                case 9:
+                    selection_sort(array, size);
                     continue;
 
                 default:

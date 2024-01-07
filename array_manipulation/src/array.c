@@ -114,3 +114,19 @@ void bubble_sort(int* array, int size) {
         }
     }
 }
+
+void selection_sort(int* array, int size) {
+    for (int i = 0; i < size - 1; i++) {
+        // find the minimum value in the unsorted array
+        int minIndex = i;
+        for (int j = i + 1; j < size; j++) {
+            if (*(array + j) < *(array + minIndex)) {
+                minIndex = j;
+            }
+        }
+        // swap the minimum value with the first value of the unsorted array
+        int temp = *(array + i);
+        *(array + i) = *(array + minIndex);
+        *(array + minIndex) = temp;
+    }
+}
