@@ -13,5 +13,6 @@ void test_quick_sort(void);
 void test_binary_search(void);
 void test_bubble_sort(void);
 void test_selection_sort(void);
+void test_insertion_sort(void);
 
 #endif

@@ -20,5 +20,7 @@ int main(void) {
     RUN_TEST(test_quick_sort);
     RUN_TEST(test_binary_search);
     RUN_TEST(test_bubble_sort);
+    RUN_TEST(test_selection_sort);
+    RUN_TEST(test_insertion_sort);
     return UNITY_END();
 }

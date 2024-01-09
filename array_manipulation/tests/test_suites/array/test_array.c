@@ -92,3 +92,17 @@ void test_selection_sort(void) {
         TEST_ASSERT_EQUAL_INT(valid_array2[i], test_array2[i]);
     }
 }
+
+void test_insertion_sort(void) {
+    int test_array1[] = {1, 2, 10, 3, 11, 8};
+    int valid_array1[] = {1, 2, 3, 8, 10, 11};
+    int test_array2[] = {3, 3, 3, 5, 1, 0};
+    int valid_array2[] = {0, 1, 3, 3, 3, 5};
+    int size = sizeof(test_array1) / sizeof(test_array1[0]);
+    insertion_sort(test_array1, size);
+    insertion_sort(test_array2, size);
+    for (int i = 0; i < size; i++) {
+        TEST_ASSERT_EQUAL_INT(valid_array1[i], test_array1[i]);
+        TEST_ASSERT_EQUAL_INT(valid_array2[i], test_array2[i]);
+    }
+}

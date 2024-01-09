@@ -130,3 +130,22 @@ void selection_sort(int* array, int size) {
         *(array + minIndex) = temp;
     }
 }
+
+void insertion_sort(int* array, int size) {
+    for (int i = 1; i < size; i++) {
+        // store the current value
+        int value = *(array + i);
+        // store the index of the previous value
+        int j = i - 1;
+        // while the previous value is greater than the current value
+        // and the index is greater than or equal to 0
+        while (*(array + j) > value && j >= 0) {
+            // move the previous value to the next position
+            *(array + j + 1) = *(array + j);
+            // decrement the index
+            j--;
+        }
+        // insert the current value at the correct position
+        *(array + j + 1) = value;
+    }
+}
