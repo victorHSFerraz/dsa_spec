@@ -26,6 +26,6 @@ void selection_sort(int* array, int size);
 
 void insertion_sort(int* array, int size);
 
-// void reverse_array(int* array, int size);
+void reverse_array(int* array, int size);
 
 #endif

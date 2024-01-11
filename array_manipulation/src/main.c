@@ -87,6 +87,7 @@ int main(void) {
             printf("8 - Bubble Sort\n");
             printf("9 - Selection Sort\n");
             printf("10 - Insertion Sort\n");
+            printf("11 - Reverse array\n");
             // printf("9 - Modify array size\n");
             printf("0 - Exit\n\n");
             scanf("%d", &selectedOption);
@@ -134,6 +135,10 @@ int main(void) {
 
                 case 10:
                     insertion_sort(array, size);
+                    continue;
+
+                case 11:
+                    reverse_array(array, size);
                     continue;
 
                 default:

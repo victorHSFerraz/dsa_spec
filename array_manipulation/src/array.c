@@ -149,3 +149,11 @@ void insertion_sort(int* array, int size) {
         *(array + j + 1) = value;
     }
 }
+
+void reverse_array(int* array, int size) {
+    for (int i = 0; i < size / 2; i++) {
+        int temp = *(array + i);
+        *(array + i) = *(array + size - i - 1);
+        *(array + size - i - 1) = temp;
+    }
+}
